@@ -1,6 +1,6 @@
 const accountId = 124563
 let accountName = "Mr. X"
-var accountPassword = "121212" // Do not use var , as it have problem on scope.
+var accountPassword = "121212" // Do not use var , as it have problem on block scope and functional scope.
 accountCity = "Mumbai"
 let accountState;
 
