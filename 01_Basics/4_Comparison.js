@@ -20,6 +20,6 @@ console.log(undefined == 0); // undefined == 0 returns false.
 console.log(undefined > 0); // The comparison undefined > 0 returns false.
 console.log(undefined < 0); //  undefined < 0 returns false.
 
-// === ; The === operator checks both the value and the type of the operands.It is known as "Strict Equality"
+// === : The === operator checks both the value and the type of the operands.It is known as "Strict Equality"
 
 console.log("2" === 2);
