@@ -47,10 +47,14 @@ console.log(Math.pow(2, 3));
 // Raises 2 to the power of 3 (2^3). Output: 8
 
 
-console.log(Math.random());
-console.log(Math.round(Math.random()*10 + 1));
+console.log(Math.random()); 
+// Generates a random floating-point number between 0 (inclusive) and 1 (exclusive).
 
-let min = 10
-let max = 20
+console.log(Math.round(Math.random() * 10 + 1)); 
+// Generates a random integer between 1 and 11 by multiplying a random number by 10, adding 1, and then rounding.
 
-console.log(Math.floor((Math.random()*10) + min))
+let min = 10;
+let max = 20;
+
+console.log(Math.floor(Math.random() * 10 + min)); 
+// Generates a random integer between 10 and 19 by multiplying a random number by 10, adding the minimum value (10), and then rounding down.
