@@ -1,4 +1,4 @@
-// Datatypes are maninly of two type : Primitive and Reference(Non-Primitive)
+// Datatypes are mainly of two type : Primitive and Reference(Non-Primitive)
 
 // Primitive types consists 7 datatype
 /*
