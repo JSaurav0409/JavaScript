@@ -73,3 +73,31 @@ const myFunc = function () {
 }
 
 console.log(typeof (myFunc)); // Function
+
+/**********************************************/
+
+// Stack (Primitive Datatype), Heap (Non-Primitive Datatype)
+
+
+let myYoutube = "Saurav Jha"
+
+let anotherName = myYoutube
+anotherName = "Daaku Roasting"
+
+console.log(myYoutube);
+console.log(anotherName);
+
+
+let userOne = {
+    name: "Saurav Jha",
+    age: 22,
+    UPI_id : "userone@ybl",
+}
+
+let userTwo = userOne
+
+
+
+userTwo.UPI_id = "usertwo@ybl"
+console.log(userOne);
+console.log(userTwo);
