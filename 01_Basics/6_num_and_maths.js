@@ -7,7 +7,7 @@ const balance = new Number(100);
 // Converts the number to a string and returns the length of the string
 // console.log(balance.toString().length); // Output: 3
 
-// Converts the number to a string with 2 decimal places
+// The number with 2 decimal places
 // console.log(balance.toFixed(2)); // Output: '100.00'
 
 const otherNumber = 123.34345;
