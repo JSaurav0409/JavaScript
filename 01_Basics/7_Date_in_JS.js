@@ -73,3 +73,5 @@ console.log(myNewDate.getDate());
 console.log(myNewDate.toLocaleDateString('default', {
     weekday: 'long',
 }));
+// Returns the day of the week for the date in the locale-specific format.
+// Output: [current day of the week, e.g., 'Tuesday']
