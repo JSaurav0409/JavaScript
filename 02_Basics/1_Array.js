@@ -12,18 +12,18 @@ const myArray2 = new Array(1, 2, 3, 4, 5, 6)
 
 // Array Methods
 
-// myArray.push(2) // Add new elements to the end of an array and returns it.
-// myArray.pop() // Removes the last element from an array and returns it.
+myArray.push(2) // Add new elements to the end of an array and returns it.
+myArray.pop() // Removes the last element from an array and returns it.
 
-// myArray.unshift(12) // Inserts new elements at the start of an array and returns it.
-// myArray.shift() // Removes the first element from an array and returns it.
+myArray.unshift(12) // Inserts new elements at the start of an array and returns it.
+myArray.shift() // Removes the first element from an array and returns it.
 
-// console.log(myArray.includes(12)); // Determines whether an array includes a certain element, returning true or false as appropriate.
+console.log(myArray.includes(12)); // Determines whether an array includes a certain element, returning true or false as appropriate.
 
-// console.log(myArray.indexOf(2)); // Returns the index of the first occurrence of a value in an array, or -1 if it is not present.
+console.log(myArray.indexOf(2)); // Returns the index of the first occurrence of a value in an array, or -1 if it is not present.
 
 
-// const newArr = myArray.join() //Adds all the elements of an array into a string, separated by the specified separator string.
+const newArr = myArray.join() //Adds all the elements of an array into a string, separated by the specified separator string.
 
 // console.log(myArray);
 // console.log(typeof(myArray));
