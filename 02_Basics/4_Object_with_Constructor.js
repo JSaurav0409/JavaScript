@@ -64,13 +64,56 @@ const user = [
 
 // console.log(tinderuser);
 
-console.log(Object.keys(tinderuser)); // Returns the names of the enumerable string properties and methods of an object.
-console.log(Object.values(tinderuser)); // Returns an array of values of the enumerable properties of an object
-console.log(Object.entries(tinderuser)); // Returns an array of key/values of the enumerable properties of an object
+// console.log(Object.keys(tinderuser)); // Returns the names of the enumerable string properties and methods of an object.
+// console.log(Object.values(tinderuser)); // Returns an array of values of the enumerable properties of an object
+// console.log(Object.entries(tinderuser)); // Returns an array of key/values of the enumerable properties of an object
 
-console.log(tinderuser.hasOwnProperty.call("user_name")); // Determines whether an object has a property with the specified name.
-
-
+// console.log(tinderuser.hasOwnProperty.call("user_name")); // Determines whether an object has a property with the specified name.
 
 
+// -----------------------------------------------------------------------------------------//
+// OBJECT DESTRUCTURING
 
+const course = {
+    "name": "JavaScript",
+    "duration": "5 days",
+    "price": 1000,
+    "courseInstructor": "Saurav Jha"
+};
+
+// Accessing the courseInstructor property directly using dot notation
+console.log(course.courseInstructor); 
+// Output: "Saurav Jha"
+
+// Destructuring allows you to extract specific properties from an object
+// and assign them to variables in a more concise way.
+
+const { courseInstructor: instructor } = course; 
+// Here, the property `courseInstructor` from the `course` object is being 
+// extracted and assigned to a new variable called `instructor`.
+// This renames the `courseInstructor` property to `instructor`.
+
+console.log(instructor); 
+// Output: "Saurav Jha"
+
+
+// Understanding JSON Format and API
+
+// JSON (JavaScript Object Notation) is a lightweight data interchange format.
+// It's easy for humans to read and write, and easy for machines to parse and generate.
+
+// Example of a JSON object:
+
+// {
+//     "name": "Saurav Jha",
+//     "email": "saurav@google.com",
+//     "age": 24
+// }
+
+// sometimes it return in array which have objects in it
+
+[
+    {},
+    {},
+    {}
+]
