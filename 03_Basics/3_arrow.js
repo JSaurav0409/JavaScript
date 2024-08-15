@@ -53,6 +53,10 @@ const user = {
 
 // * Implicit Return : Implicit return allows you to skip the return keyword when there's a single expression, making the code cleaner and more readable.
 
-const addTwo = (num1, num2) => (num1 + num2) // we can write this wven without parenthesis
-console.log(addTwo(5, 7)); // Output: 12
+// const addTwo = (num1, num2) => (num1 + num2) // we can write this wven without parenthesis
+// console.log(addTwo(5, 7)); // Output: 12
 
+const addTwo = (num1, num2) => ({username: "hitesh"}) // we have to use () for object in Implicit return
+
+
+console.log(addTwo(3, 4))
