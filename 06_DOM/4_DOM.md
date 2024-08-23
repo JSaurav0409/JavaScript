@@ -1,4 +1,4 @@
-# JavaScript DOM Manipulation
+# JavaScript DOM Manipulation 4
 
 ## 1. Adding Items to a List
 
@@ -7,7 +7,7 @@
 ```javascript
 function addLanguage(langName) {
     // Create a new list item element
-    
+
     const li = document.createElement("li");
 
     // Set the list item content to the language name
