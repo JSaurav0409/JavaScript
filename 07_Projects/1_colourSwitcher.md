@@ -161,3 +161,41 @@ buttons.forEach((button) => {
 });
 
 ```
+
+```javascript 
+
+const buttons = document.querySelectorAll('.button');
+const body = document.querySelector('body');
+
+buttons.forEach((button) => {
+  // console.log(button)
+  button.addEventListener('click', function (e) {
+    // console.log(e)
+    // console.log(e.target.id)
+    const color = e.target.id;
+
+    // using if-else statements
+
+    if(color === 'grey'){
+      body.style.backgroundColor = color
+    }
+    else if(color === 'beige'){
+      body.style.backgroundColor = color
+    }
+    else if(color === 'blue'){
+      body.style.backgroundColor = color
+    }
+    else if(color === 'yellow'){
+      body.style.backgroundColor = color
+    }
+    else{
+      body.style.backgroundColor = white
+    }
+
+
+  });
+});
+
+
+
+```
