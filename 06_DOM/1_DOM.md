@@ -47,11 +47,54 @@
 
 - `document.querySelector('selector')`: Returns the first element matching the CSS selector.
 
+```javascript
+
+// Accessing Elements
+
+const elementId = document.getElementById('myElement');
+const elementsClass = document.getElementsByClassName('myClass');
+const elementsQuery = document.querySelectorAll('.myClass');
+const elementsTag = document.getElementsByTagName('p');
+const elementQuery = document.querySelector('#myElement');
+
+```
+
 ### Modifying Attributes
 
 - `element.setAttribute('attribute', 'value')`: Sets the value of an attribute.
 - `element.getAttribute('attribute')` : Gets the attribute value.
 - `element.removeAttribute('attribute')`: Removes an attribute.
+
+
+``` javascript 
+
+// Modifying Attributes
+
+// Example Element
+let title = document.getElementById('title');
+
+// Setting an Attribute
+title.setAttribute('class', 'highlighted'); 
+// This sets the 'class' attribute of the 'title' element to 'highlighted'.
+
+// Getting an Attribute
+let classValue = title.getAttribute('class'); 
+console.log(classValue); 
+// This retrieves the value of the 'class' attribute, which is 'highlighted'.
+
+// Removing an Attribute
+title.removeAttribute('class'); 
+// This removes the 'class' attribute from the 'title' element.
+
+title.style.backgroundColor = '#212121'
+title.style.color = '#fff'
+title.style.padding = '10px'
+title.style.margin = '10px'
+title.style.borderRadius = '10px'
+title.style.width = '100%'
+title.style.height = '100%'
+
+```
 
 ### What is difference between 'textContent', 'innerHTML' and 'innerText'
 
@@ -64,26 +107,8 @@
 
 ### Example
 
-```javascript
 
-// Accessing Elements
-
-const elementId = document.getElementById('myElement');
-const elementsClass = document.getElementsByClassName('myClass');
-const elementsQuery = document.querySelectorAll('.myClass');
-const elementsTag = document.getElementsByTagName('p');
-const elementQuery = document.querySelector('#myElement');
-
-
-// Modifying Attributes
-
-title.style.backgroundColor = '#212121'
-title.style.color = '#fff'
-title.style.padding = '10px'
-title.style.margin = '10px'
-title.style.borderRadius = '10px'
-title.style.width = '100%'
-title.style.height = '100%'
+``` javascript
 
 // Accessing elements in Nodelist
 
@@ -104,3 +129,5 @@ console.log(convertedArray)
 convertedArray.forEach( (item) => {
     item.style.color = 'orange'
 })
+
+```
