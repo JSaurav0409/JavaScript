@@ -163,6 +163,8 @@ buttons.forEach((button) => {
 
 ```
 
+### using if-else syntax
+
 ```javascript 
 
 const buttons = document.querySelectorAll('.button');
