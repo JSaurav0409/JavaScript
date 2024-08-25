@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+    <style>
+        body {
+            background-color: #414141;
+            color: aliceblue;
+        }
+        a {
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+
+    <script>
+        // Event Propagation: The order in which events are handled in the DOM.
+
+        // Event Bubbling: The event starts from the target element and bubbles up to the parent elements.
+
+        // Event Capturing: The event is first captured by the parent elements and then propagated down to the target element.
+
+        // e.stopPropagation(): Stops the event from propagating (bubbling or capturing) to parent elements.
+
+        // In the addEventListener method, the third parameter specifies the event handling phase:
+        // false (default): The event handler is invoked during the bubbling phase.
+        // true: The event handler is invoked during the capturing phase.
+
+        // Example: Event Bubbling
+        // document.getElementById('river').addEventListener('click', (e) => {
+        //     console.log("You clicked on the river image");
+        //     e.stopPropagation(); // Stops event from bubbling up.
+        // }, false);
+
+        // document.getElementById('images').addEventListener('click', (e) => {
+        //     console.log("You clicked on the images container");
+        // }, false);
+
+        // Example: Event Capturing
+        // document.getElementById('river').addEventListener('click', (e) => {
+        //     console.log("You clicked on the river image");
+        // }, true);
+
+        // document.getElementById('images').addEventListener('click', (e) => {
+        //     console.log("You clicked on the images container");
+        // }, true);
+
+        // Example: Preventing Default Behavior
+        // document.getElementById('google').addEventListener('click', (e) => {
+        //     e.preventDefault(); // Prevents default behavior of the link.
+        //     e.stopPropagation();
+        //     console.log("You clicked on the Google link");
+        // });
+
+        // Activity: Disappear the image when user clicks on it
+        document.querySelector('#images').addEventListener('click', function(e) {
+            console.log(e.target.tagName);
+
+            if (e.target.tagName === 'IMG') {
+                console.log(e.target.id);
+                let removeImage = e.target.parentNode;
+                
+                // First Approach: Remove the image element
+                // removeImage.remove(); 
+
+                // Second Approach: Hide the image element
+                // removeImage.style.display = 'none';
+
+                // Third Approach: Remove the parent node
+                removeImage.parentNode.removeChild(removeImage);
+            }
+        });
+    </script>
+</body>
+</html>
