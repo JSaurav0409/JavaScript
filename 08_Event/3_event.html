@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+</head>
+<body style="background-color: #212120 ; color: beige">
+    <h1>Chai aur Code</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    /*
+    setInterval :'setInterval' is a JavaScript function that repeatedly 
+                calls a specified function or executes a block of code
+                with a fixed time delay between each call. 
+    */
+
+    let intervalId ;
+
+const start = document.querySelector('#start').addEventListener('click',function(){
+    intervalId = setInterval(function(){
+        console.log(Date.now());
+    },1000);
+})
+    
+const stop = document.querySelector('#stop').addEventListener('click',function(){
+    clearInterval(intervalId)
+    console.log("You stopped the print")
+})
+
+
+</script>
+</html>
