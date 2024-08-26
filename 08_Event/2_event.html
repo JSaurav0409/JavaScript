@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Discussion</title>
+</head>
+<body style="background-color: #212120 ; color: beige">
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+// 'setTimeout' is a JavaScript function that allows you to schedule a function or a block of code to be executed after a specified delay (in milliseconds). 
+
+/*
+'clearTimeout' : clearTimeout is a JavaScript function used to cancel
+a previously set setTimeout call before it has a chance to execute. 
+It prevents the delayed function from running if it’s no longer needed or 
+if certain conditions have changed.
+*/
+
+/* Approach 1: Inline Anonymous Function
+    setTimeout(function(){
+        console.log('Hi Saurav');
+    },2000)
+*/
+
+// Approach 2: Named Function Reference
+
+/*
+const sayHi = function(){
+    console.log('Hi Saurav');
+}
+setTimeout(sayHi,2000)
+*/
+
+const changeH1 = function(){
+    document.querySelector('h1').innerHTML = "Let's talk about Async Function"
+}
+
+// setTimeout();
+const stopEvent = setTimeout(changeH1,2000)
+
+// clearTimeout();
+document.querySelector('#stop').addEventListener('click',function(){
+    clearTimeout(stopEvent);
+    console.log("Stop Button is Clicked !")
+})
+
+
+</script>
+</html>
