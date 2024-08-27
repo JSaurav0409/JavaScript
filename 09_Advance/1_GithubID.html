@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub ID Card</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: antiquewhite;
+            padding: 15px;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .card h2 {
+            margin: 10px 0;
+        }
+
+        .card p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card" id="github-card">
+    </div>
+
+    <script>
+        const URL = 'https://api.github.com/users/JSaurav0409';
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', URL);
+
+        xhr.onreadystatechange = function(){
+            if (xhr.readyState === 4 && xhr.status === 200){
+                const data = JSON.parse(xhr.responseText);
+
+                // Creating an image element
+                const img = document.createElement('img');
+                img.src = data.avatar_url;
+                img.alt = `${data.login}'s profile picture`
+
+
+                // Creating Name element
+                const name = document.createElement('h2');
+                name.textContent = data.name || data.login; // fallback to login if name is not available
+
+
+                // creating a count element
+                const followers = document.createElement('p');
+                followers.textContent = `Follwers : ${data.followers}`;
+
+                // Append element to the card
+                const card = document.getElementById('github-card');
+                card.appendChild(img);
+                card.appendChild(name);
+                card.appendChild(followers);
+            }
+        }
+        xhr.send();
+    </script>
+</body>
+</html>
