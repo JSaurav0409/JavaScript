@@ -45,18 +45,22 @@ const body = document.body;
 let intervalId;
 
 start.addEventListener('click', function () {
-  intervalId = setInterval(function () {
-    let r = Math.floor(Math.random() * 256);
-    let g = Math.floor(Math.random() * 256);
-    let b = Math.floor(Math.random() * 256);
+  if (!intervalId) {
+    intervalId = setInterval(function () {
+      let r = Math.floor(Math.random() * 256);
+      let g = Math.floor(Math.random() * 256);
+      let b = Math.floor(Math.random() * 256);
 
-    body.style.backgroundColor = `rgb( ${r}, ${g}, ${b} )`;
-  }, 1000);
+      body.style.backgroundColor = `rgb( ${r}, ${g}, ${b})`;
+    }, 1000);
+  }
 });
 
 stop.addEventListener('click', function () {
   clearInterval(intervalId);
+  intervalId = null;
 });
+
 
 
 ```
