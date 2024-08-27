@@ -1,4 +1,4 @@
-# Keyboard Check
+# Project 6 : Keyboard Check
 
 ### HTML CODE WITH INLINE CSS
 
