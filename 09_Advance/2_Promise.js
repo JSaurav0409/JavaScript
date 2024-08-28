@@ -140,6 +140,7 @@ consumedPromiseFive();
  * Fetches user data from an API and logs it.
  * Uses async/await for cleaner asynchronous code handling.
  */
+
 // async function getAllData() {
 //     try {
 //         Fetch data from the API
