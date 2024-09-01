@@ -16,7 +16,7 @@ function createUser(username, email, password) {
 //? To ensure 'setUsername' uses the correct context, use .call() to pass the current 'this'
 
 function createUser(username, email, password) {
-    setUsername.call(this, username); // Pass the current 'this' context to setUsername
+    setUsername.call(this, username); // To call it explicitly we will use .call() to pass the current 'this' context to setUsername.
 
     this.email = email;
     this.password = password;
