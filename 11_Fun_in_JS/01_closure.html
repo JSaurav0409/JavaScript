@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure and Lexical Scoping</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Closure and Lexical Scoping in JavaScript</h1>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+    <!-- Add more buttons as needed -->
+</body>
+
+<script>
+    // Use Case of Closures and Lexical Scoping with Multiple Buttons
+
+    // The colors and corresponding button IDs are stored in an array.
+    const buttons = [
+        { id: "orange", color: "orange" },
+        { id: "green", color: "green" },
+        // Add more buttons here if needed
+    ];
+
+    // The handleClick function creates a closure for each button's color.
+    function handleClick(color) {
+        return function() {
+            document.body.style.backgroundColor = color;
+        }
+    }
+
+    // Loop through the array and assign the onclick event for each button dynamically.
+    buttons.forEach(button => {
+        document.getElementById(button.id).onclick = handleClick(button.color);
+    });
+
+</script>
+</html>
